@@ -86,7 +86,7 @@ import math
 ##создаем еще один список, т.к. предыдущий пустой
 #spisok=[1, 'lacit', True, 13.37]
 #i=0
-#while i<4:
+#while i<len(spisok):
 #    print(spisok[i])
 #    i+=1
 
