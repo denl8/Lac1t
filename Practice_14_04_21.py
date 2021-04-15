@@ -2,15 +2,17 @@ import random
 list_1 = ['ball','мессенджер', 'triangle']
 empty_list=[]
 list_2=list(list_1[random.randint(0,len(list_1)-1)])
-print(''.join(list_2))
+word=(''.join(list_2))
+#print(word)
 i=0
 while i<10 and list_2!=empty_list:
     a=input()
     if a in list_2:
-        print("yes")
-        list_2.remove(a)
+        #print("yes")
+        while a in list_2:
+        	list_2.remove(a)
     else:
-        print("no")
+        #print("no")
         i+=1
         if i==1:
             print("│\n"*7+"┴")
@@ -31,8 +33,6 @@ while i<10 and list_2!=empty_list:
         elif i==9:
             print("┌─┬───┐\n"+"|/    |\n"+"|     |\n"+"|     0\n"+"|    /|\ \n"+"|     | \n"+"|\n"+"┴")
         elif i==10:
-            print("┌─┬───┐\n"+"|/    |\n"+"|     |\n"+"|     0\n"+"|    /|\ \n"+"|     ║ \n"+"|\n"+"┴\n"+"\nGame Over\nYou Lose(((\n")
+            print("┌─┬───┐\n"+"|/    |\n"+"|     |\n"+"|     0\n"+"|    /|\ \n"+"|     ║ \n"+"|\n"+"┴\n"+"\nВы проиграли!\n")
 if i<10 and list_2==empty_list:
-    print("\nGame Over\nYou Win!\n")
-
-
+    print("\nВы угадали слово: "+word)
